@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Fri Jan 25 2019 12:42:08 GMT+0800">
-        <meta property="article:modified_time" content="Fri Jan 25 2019 12:42:42 GMT+0800">
+        <meta property="article:modified_time" content="Fri Jan 25 2019 12:49:53 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2019/01/25/机器学习主要术语/index.html",
     "headline": "机器学习主要术语",
     "datePublished": "Fri Jan 25 2019 12:42:08 GMT+0800",
-    "dateModified": "Fri Jan 25 2019 12:42:42 GMT+0800",
+    "dateModified": "Fri Jan 25 2019 12:49:53 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "罗马",
@@ -345,7 +345,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#问题构建-Framing-：机器学习主要术语"><span class="post-toc-number">1.</span> <span class="post-toc-text">问题构建 (Framing)：机器学习主要术语</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#标签"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">标签</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#特征"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">特征</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#样本"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">样本</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#模型"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">模型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#回归与分类"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">回归与分类</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#问题构建-Framing-：机器学习主要术语"><span class="post-toc-number">1.</span> <span class="post-toc-text">问题构建 (Framing)：机器学习主要术语</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#模型"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">模型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#回归与分类"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">回归与分类</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -480,71 +480,22 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="问题构建-Framing-：机器学习主要术语"><a href="#问题构建-Framing-：机器学习主要术语" class="headerlink" title="问题构建 (Framing)：机器学习主要术语"></a>问题构建 (Framing)：机器学习主要术语</h1><p><strong>预计用时</strong>：8 分钟</p>
-<p>什么是（监督式）机器学习？简单来说，它的定义如下：</p>
-<ul>
-<li>机器学习系统通过学习如何组合输入信息来对从未见过的数据做出有用的预测。</li>
-</ul>
-<p>下面我们来了解一下机器学习的基本术语。</p>
-<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p><strong>标签</strong>是我们要预测的事物，即简单线性回归中的 <code>y</code> 变量。标签可以是小麦未来的价格、图片中显示的动物品种、音频剪辑的含义或任何事物。</p>
-<h2 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h2><p><strong>特征</strong>是输入变量，即简单线性回归中的 <code>x</code> 变量。简单的机器学习项目可能会使用单个特征，而比较复杂的机器学习项目可能会使用数百万个特征，按如下方式指定：</p>
-<p>x1,x2,…xN</p>
-<p>\{x_1, x_2, … x_N\}</p>
-<p>在垃圾邮件检测器示例中，特征可能包括：</p>
-<ul>
-<li>电子邮件文本中的字词</li>
-<li>发件人的地址</li>
-<li>发送电子邮件的时段</li>
-<li>电子邮件中包含“一种奇怪的把戏”这样的短语。</li>
-</ul>
-<h2 id="样本"><a href="#样本" class="headerlink" title="样本"></a>样本</h2><p><strong>样本</strong>是指数据的特定实例：<strong>x</strong>。（我们采用粗体 <strong>x</strong> 表示它是一个矢量。）我们将样本分为以下两类：</p>
-<ul>
-<li>有标签样本</li>
-<li>无标签样本</li>
-</ul>
-<p><strong>有标签样本</strong>同时包含特征和标签。即：</p>
-<p><code>labeled examples:  {features, label}:  (x, y)</code></p>
-<p>我们使用有标签样本来<strong>训练</strong>模型。在我们的垃圾邮件检测器示例中，有标签样本是用户明确标记为“垃圾邮件”或“非垃圾邮件”的各个电子邮件。</p>
-<p>例如，下表显示了从包含加利福尼亚州房价信息的<a href="https://developers.google.com/machine-learning/crash-course/california-housing-data-description" target="_blank" rel="noopener">数据集</a>中抽取的 5 个有标签样本：</p>
-<p>housingMedianAge<br>（特征）</p>
-<p>totalRooms<br>（特征）</p>
-<p>totalBedrooms<br>（特征）</p>
-<p>medianHouseValue<br>（标签）</p>
-<p>15</p>
-<p>5612</p>
-<p>1283</p>
-<p>66900</p>
-<p>19</p>
-<p>7650</p>
-<p>1901</p>
-<p>80100</p>
-<p>17</p>
-<p>720</p>
-<p>174</p>
-<p>85700</p>
-<p>14</p>
-<p>1501</p>
-<p>337</p>
-<p>73400</p>
-<p>20</p>
-<p>1454</p>
-<p>326</p>
-<p>65500</p>
+        <h1 id="问题构建-Framing-：机器学习主要术语"><a href="#问题构建-Framing-：机器学习主要术语" class="headerlink" title="问题构建 (Framing)：机器学习主要术语"></a>问题构建 (Framing)：机器学习主要术语</h1><div class="devsite-article-body clearfix
+            " itemprop="articleBody"><br><br><script src="https://developers.google.com/_static/a0b6e5b720/js/managed/mathjax/MathJax.js?config=TeX-AMS-MML_SVG" gapi_processed="true"></script><br><link href="https://developers.google.com/machine-learning/crash-course/cc.css" rel="stylesheet" type="text/css"><br><link href="https://developers.google.com/machine-learning/crash-course/vplus-slides.css" rel="stylesheet" type="text/css"><br><br><aside class="note time"><strong>预计用时</strong>：8 分钟</aside><br><br>什么是（监督式）机器学习？简单来说，它的定义如下：<br><br><em>   机器学习系统通过学习如何组合输入信息来对从未见过的数据做出有用的预测。<br><br>下面我们来了解一下机器学习的基本术语。<br><br>## 标签<br><br><strong>标签</strong>是我们要预测的事物，即简单线性回归中的 <code>y</code> 变量。标签可以是小麦未来的价格、图片中显示的动物品种、音频剪辑的含义或任何事物。<br><br>## 特征<br><br><strong>特征</strong>是输入变量，即简单线性回归中的 <code>x</code> 变量。简单的机器学习项目可能会使用单个特征，而比较复杂的机器学习项目可能会使用数百万个特征，按如下方式指定：<br><br><span class="MathJax_Preview" style="color: inherit;"></span><div class="MathJax_SVG_Display"><span class="MathJax_SVG" id="MathJax-Element-1-Frame" tabindex="0" style="font-size: 100%; display: inline-block; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;><mspace linebreak=&quot;newline&quot; /><mrow class=&quot;MJX-TeXAtom-ORD&quot;><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mo>.</mo><mo>.</mo><mo>.</mo><msub><mi>x</mi><mi>N</mi></msub><mspace linebreak=&quot;newline&quot; /></mrow></math>" role="presentation"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="95.385ex" height="4.151ex" viewbox="0 -511.5 41068.2 1787.4" role="img" focusable="false" style="vertical-align: -2.963ex; max-width: 80600px;" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><g transform="translate(17744,0)"><use xlink:href="#MJMATHI-78" x="0" y="0"/><use transform="scale(0.707)" xlink:href="#MJMAIN-31" x="809" y="-213"/><use xlink:href="#MJMAIN-2C" x="1026" y="0"/><g transform="translate(1471,0)"><use xlink:href="#MJMATHI-78" x="0" y="0"/><use transform="scale(0.707)" xlink:href="#MJMAIN-32" x="809" y="-213"/></g><use xlink:href="#MJMAIN-2C" x="2497" y="0"/><use xlink:href="#MJMAIN-2E" x="2943" y="0"/><use xlink:href="#MJMAIN-2E" x="3388" y="0"/><use xlink:href="#MJMAIN-2E" x="3833" y="0"/><g transform="translate(4278,0)"><use xlink:href="#MJMATHI-78" x="0" y="0"/><use transform="scale(0.707)" xlink:href="#MJMATHI-4E" x="809" y="-213"/></g></g></g></svg><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mspace linebreak="newline"></mspace><mrow class="MJX-TeXAtom-ORD"><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mo>.</mo><mo>.</mo><mo>.</mo><msub><mi>x</mi><mi>N</mi></msub><mspace linebreak="newline"></mspace></mrow></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-1">\{x_1, x_2, … x_N\}</script><br><br>在垃圾邮件检测器示例中，特征可能包括：
+
+</em>   电子邮件文本中的字词<br><em>   发件人的地址
+</em>   发送电子邮件的时段<br><em>   电子邮件中包含“一种奇怪的把戏”这样的短语。<br><br>## 样本<br><br><strong>样本</strong>是指数据的特定实例：<strong>x</strong>。（我们采用粗体 <strong>x</strong> 表示它是一个矢量。）我们将样本分为以下两类：
+
+</em>   有标签样本<br>*   无标签样本<br><br><strong>有标签样本</strong>同时包含特征和标签。即：<br><br><pre class="prettyprint"><div class="devsite-code-button-wrapper"><div class="devsite-code-button gc-analytics-event material-icons devsite-dark-code-button" data-category="Site-Wide Custom Events" data-label="Dark Code Toggle" track-type="exampleCode" track-name="darkCodeToggle" data-tooltip-align="b,c" data-tooltip="深色代码主题" aria-label="深色代码主题" data-title="深色代码主题"></div><div class="devsite-code-button gc-analytics-event material-icons devsite-click-to-copy-button" data-category="Site-Wide Custom Events" data-label="Click To Copy" track-type="exampleCode" track-name="clickToCopy" data-tooltip-align="b,c" data-tooltip="点击复制" aria-label="点击复制" data-title="点击复制"></div></div><code>&lt;span class=&quot;pln&quot;&gt;&amp;nbsp; labeled examples&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;features&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; label&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}:&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; y&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+&lt;/span&gt;</code></pre><br><br>我们使用有标签样本来<strong>训练</strong>模型。在我们的垃圾邮件检测器示例中，有标签样本是用户明确标记为“垃圾邮件”或“非垃圾邮件”的各个电子邮件。<br><br>例如，下表显示了从包含加利福尼亚州房价信息的<a href="https://developers.google.com/machine-learning/crash-course/california-housing-data-description" target="_blank" rel="noopener">数据集</a>中抽取的 5 个有标签样本：<br><br><div class="devsite-table-wrapper"><table><br>  <tbody><tr><br>    <th>housingMedianAge<br>（特征）</th><br>    <th>totalRooms<br>（特征）</th><br>    <th>totalBedrooms<br>（特征）</th><br>    <th>medianHouseValue<br>（标签）</th><br>  </tr><br><br>  <tr><br>    <td>15</td><br>    <td>5612</td><br>    <td>1283</td><br>    <td>66900</td><br>  </tr><br>  <tr><br>    <td>19</td><br>    <td>7650</td><br>    <td>1901</td><br>    <td>80100</td><br>  </tr><br>  <tr><br>    <td>17</td><br>    <td>720</td><br>    <td>174</td><br>    <td>85700</td><br>  </tr><br>  <tr><br>    <td>14</td><br>    <td>1501</td><br>    <td>337</td><br>    <td>73400</td><br>  </tr><br>  <tr><br>    <td>20</td><br>    <td>1454</td><br>    <td>326</td><br>    <td>65500</td><br>  </tr><br></tbody></table></div>
+
 <p><strong>无标签样本</strong>包含特征，但不包含标签。即：</p>
-<p><code>unlabeled examples:  {features,  ?}:  (x,  ?)</code></p>
+<pre class="prettyprint"><div class="devsite-code-button-wrapper"><div class="devsite-code-button gc-analytics-event material-icons devsite-dark-code-button" data-category="Site-Wide Custom Events" data-label="Dark Code Toggle" track-type="exampleCode" track-name="darkCodeToggle" data-tooltip-align="b,c" data-tooltip="深色代码主题" aria-label="深色代码主题" data-title="深色代码主题"></div><div class="devsite-code-button gc-analytics-event material-icons devsite-click-to-copy-button" data-category="Site-Wide Custom Events" data-label="Click To Copy" track-type="exampleCode" track-name="clickToCopy" data-tooltip-align="b,c" data-tooltip="点击复制" aria-label="点击复制" data-title="点击复制"></div></div>`<span class="pln">&nbsp; unlabeled examples</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">features</span><span class="pun">,</span><span class="pln"> </span><span class="pun">?}:</span><span class="pln"> </span><span class="pun">(</span><span class="pln">x</span><span class="pun">,</span><span class="pln"> </span><span class="pun">?)</span><span class="pln">
+</span>`</pre>
+
 <p>以下是取自同一住房数据集的 3 个无标签样本，其中不包含 <code>medianHouseValue</code>：</p>
-<p>housingMedianAge<br>（特征）</p>
-<p>totalRooms<br>（特征）</p>
-<p>totalBedrooms<br>（特征）</p>
-<p>42</p>
-<p>1686</p>
-<p>361</p>
-<p>34</p>
-<p>1226</p>
-<p>180</p>
-<p>33</p>
-<p>1077</p>
-<p>271</p>
+<div class="devsite-table-wrapper"><table><br>  <tbody><tr><br>    <th>housingMedianAge<br>（特征）</th><br>    <th>totalRooms<br>（特征）</th><br>    <th>totalBedrooms<br>（特征）</th><br>  </tr><br>  <tr><br>    <td>42</td><br>    <td>1686</td><br>    <td>361</td><br>  </tr><br>  <tr><br>    <td>34</td><br>    <td>1226</td><br>    <td>180</td><br>  </tr><br>  <tr><br>    <td>33</td><br>    <td>1077</td><br>    <td>271</td><br>  </tr><br></tbody></table></div>
+
 <p>在使用有标签样本训练模型之后，我们会使用该模型预测无标签样本的标签。在垃圾邮件检测器示例中，无标签样本是用户尚未添加标签的新电子邮件。</p>
 <h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><p>模型定义了特征与标签之间的关系。例如，垃圾邮件检测模型可能会将某些特征与“垃圾邮件”紧密联系起来。我们来重点介绍一下模型生命周期的两个阶段：</p>
 <ul>
@@ -567,26 +518,11 @@
 <li><p>这是一张狗、猫还是仓鼠图片？</p>
 </li>
 </ul>
-<p><strong>关键字词</strong></p>
-<ul>
-<li><p><a href="https://developers.google.com/machine-learning/glossary#classification_model" target="_blank" rel="noopener">分类模型</a></p>
-</li>
-<li><p><a href="https://developers.google.com/machine-learning/glossary#example" target="_blank" rel="noopener">样本</a></p>
-</li>
-<li><p><a href="https://developers.google.com/machine-learning/glossary#feature" target="_blank" rel="noopener">特征</a></p>
-</li>
-<li><p><a href="https://developers.google.com/machine-learning/glossary#inference" target="_blank" rel="noopener">推断</a></p>
-</li>
-<li><p><a href="https://developers.google.com/machine-learning/glossary#label" target="_blank" rel="noopener">标签</a></p>
-</li>
-<li><p><a href="https://developers.google.com/machine-learning/glossary#model" target="_blank" rel="noopener">模型</a></p>
-</li>
-<li><p><a href="https://developers.google.com/machine-learning/glossary#regression_model" target="_blank" rel="noopener">回归模型</a></p>
-</li>
-<li><p><a href="https://developers.google.com/machine-learning/glossary#training" target="_blank" rel="noopener">训练</a></p>
-</li>
-</ul>
-<p><a href="https://support.google.com/machinelearningeducation" target="_blank" rel="noopener">帮助中心</a></p>
+<aside class="key-term"> <strong>关键字词</strong><br>  <div class="devsite-table-wrapper"><table class="columns"><br>    <tbody><tr><br>      <td><li> <a href="https://developers.google.com/machine-learning/glossary#classification_model" target="_blank" rel="noopener">分类模型</a> </li></td><br>      <td><li> <a href="https://developers.google.com/machine-learning/glossary#example" target="_blank" rel="noopener">样本</a> </li></td><br>    </tr><br>    <tr><br>      <td><li> <a href="https://developers.google.com/machine-learning/glossary#feature" target="_blank" rel="noopener">特征</a> </li></td><br>      <td><li> <a href="https://developers.google.com/machine-learning/glossary#inference" target="_blank" rel="noopener">推断</a> </li></td><br>    </tr><br>    <tr><br>      <td><li> <a href="https://developers.google.com/machine-learning/glossary#label" target="_blank" rel="noopener">标签</a> </li></td><br>      <td><li> <a href="https://developers.google.com/machine-learning/glossary#model" target="_blank" rel="noopener">模型</a> </li></td><br>    </tr><br>    <tr><br>      <td><li> <a href="https://developers.google.com/machine-learning/glossary#regression_model" target="_blank" rel="noopener">回归模型</a> </li></td><br>      <td><li> <a href="https://developers.google.com/machine-learning/glossary#training" target="_blank" rel="noopener">训练</a> </li></td><br>    </tr><br>  </tbody></table></div><br></aside>
+
+<div style="text-align: center; padding-top: 20px;"><br>  <a href="https://support.google.com/machinelearningeducation" target="_blank" rel="noopener">帮助中心</a><br></div>
+
+<p>  </p></div><p></p>
 
         
     
